@@ -8,6 +8,7 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
+  StatusBar,
 } from "react-native";
 import * as Location from "expo-location";
 import { useState, useEffect } from "react";
@@ -34,7 +35,6 @@ export default function App() {
         "La Plaza Independencia es una importante plaza argentina de la ciudad de San Miguel de Tucumán. Se la considera el kilómetro 0 de la provincia de Tucumán y se encuentra rodeada de importantes edificios. En ella confluyen ciudadanos, turistas, comerciantes y espectáculos culturales. Las calles que la rodean son 24 de Septiembre al Sur, San Martín al norte, Laprida al Este y 25 de Mayo al oeste. Ubicada en el centro de la ciudad abarcando aproximadamente una ha, fue enmarcada originalmente en 1685. En sus orígenes cumplió la función de Plaza de Armas hasta que, en 1857, fue transformada en un paseo público y es al día de hoy el más concurrido de la capital tucumana. Bastante densamente forestada, su vegetación interior está formada por lapachos, laureles, tarcos, palmeras y naranjos.",
       direction: "Av. 24 de Septiembre 400",
     },
-
     {
       name: "Casa Histórica",
       latitude: -26.83301185,
@@ -122,6 +122,7 @@ export default function App() {
 
   return (
     <View>
+      <StatusBar />
       <ScrollView contentContainerStyle={styles.container}>
         <Image
           source={{
